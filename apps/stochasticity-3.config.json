@@ -1,0 +1,8 @@
+{
+    "appType": "stochastic",
+    "title": "Stochasticity: SIS",
+    "readOnlyCode": true,
+    "help": {
+        "tabName": "Explanation"
+    }
+}
