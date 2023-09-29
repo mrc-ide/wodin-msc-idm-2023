@@ -1,9 +1,9 @@
 {
-    "courseTitle": "MSc 2022",
-    "savePrefix": "msc-idm-2022",
+    "courseTitle": "MSc 2023",
+    "savePrefix": "msc-idm-2023",
     "port": 3000,
     "appsPath": "apps",
-    "baseUrl": "https://epimodels.dide.ic.ac.uk/msc-idm-2022",
+    "baseUrl": "https://epimodels.dide.ic.ac.uk/msc-idm-2023",
     "odinApi": "http://odin.api:8001",
     "redisUrl": "redis://redis:6379"
 }
