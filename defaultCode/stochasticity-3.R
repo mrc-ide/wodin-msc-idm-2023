@@ -1,4 +1,4 @@
-beta <- user(0.5)  # Contact rate
+beta <- user(0.5)  # Transmission rate
 sigma <- user(0.3) # Recovery rate
 N <- user(1000)    # Total population size
 
@@ -6,10 +6,12 @@ initialise_at_steady_state <- user(1, integer = TRUE, min = 0, max = 1)
 
 I_init <- user(1)
 
-# Steady-state prevelance
+# Steady-state prevalence
 I_star <- if (beta > sigma) N * (beta - sigma) / beta else 0
 
+# The step size, in units of time
 dt <- 0.01
+# The current time is the number of steps taken multiplied by the step size
 time <- step * dt
 
 # Stochastic solution
