@@ -1,18 +1,19 @@
-beta <- user(0.5)      # Contact rate
+beta <- user(0.5)      # Transmission rate
 sigma <- user(0.3)     # Recovery rate
-mu <- user(0.00038)    # Death rate
+mu <- user(0.00038)    # Mortality rate
 prop_immune <- user(0) # Proportion of population initially immune
 N <- user(10000)       # Total population.
 I_init <- user(5)      # Initial infecteds
 
-# Derive initial susceptibles from this:
+# Derive initial number of susceptibles:
 S_init <- (N - I_init) * (1 - prop_immune)
 
 initialise_at_steady_state <- user(0, integer = TRUE, min = 0, max = 1)
 
+# The step size, in units of time
 dt <- 0.01
 
-# Steady-state prevelance
+# Steady-state prevalence
 R0 <- beta / (sigma + mu)
 # Number of infecteds at endemic equilibrium state
 I_star <- N * mu * (beta - sigma - mu) / (beta * (mu + sigma))
