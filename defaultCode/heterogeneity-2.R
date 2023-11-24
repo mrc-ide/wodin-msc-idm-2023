@@ -35,7 +35,7 @@ I_w <- I_w_l+I_w_h
 I_m <- I_m_l+I_m_h
 N_w <- S_w_l+I_w_l+S_w_h+I_w_h
 N_m <- S_m_l+I_m_l+S_m_h+I_m_h
-N_tot <- N_w+N_m
+N_all <- N_w+N_m
 
 pcr_2c_l=pcr_2c/(RatioHL*propHighRisk+(1-propHighRisk))
 pcr_2c_h=pcr_2c_l*RatioHL
@@ -72,8 +72,8 @@ Epsilon <-user(1)		# risk assortativity parameter
 
 betaMW_2c <- user(0.5)  	#per partner STI transmission probability, male to female
 betaWM_2c <- user(0.5)  	#per partner STI transmission probability, female to male
-#recovery_2c <- user(2)     #recovery rate of infection per person per year (1/mean duration in years)
-DurInf_2c <- user(0.5)     # mean duration of infectiousness in years (1/recovery rate)
+#recovery_2c <- user(2)     #recovery rate of infection per person per year (1/mean duration in years)		
+DurInf_2c <- user(0.5)     # mean duration of infectiousness in years (1/recovery rate)		
 recovery_2c<-1/DurInf_2c
 
 ##Additional outputs
@@ -85,6 +85,6 @@ output(prevalence_w_l) <- I_w_l/(I_w_l+S_w_l)
 output(prevalence_m_l) <- I_m_l/(I_m_l+S_m_l)
 output(prevalence_f_h) <- I_w_h/(I_w_h+S_w_h)
 output(prevalence_m_h) <- I_m_h/(I_m_h+S_m_h)
-output(prevalence_tot) <- (I_w+I_m)/N_tot
+output(prevalence_all) <- (I_w+I_m)/N_all
 output(cLow) <- pcr_2c/(RatioHL*propHighRisk+(1-propHighRisk))
 output(cHigh) <- pcr_2c_l*RatioHL
