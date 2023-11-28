@@ -1,5 +1,6 @@
 {
   "appType": "basic",
   "title": "Design a model to answer a public health control question",
-  "readOnlyCode": false
+  "readOnlyCode": false,
+  "multiSensitivity": true
 }
