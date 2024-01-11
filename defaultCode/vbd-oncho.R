@@ -1,4 +1,3 @@
-
 deriv(W)<-((deltaH0 + deltaHinfinity * CH * ABR * L)/(1 + CH * ABR * L)) * ABR * L - (sigmaW +  muH) * W
 
 deriv(M)<-((1/2) * phi * F) * W - (sigmaM + muH) * M
